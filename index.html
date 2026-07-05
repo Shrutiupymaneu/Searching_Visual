@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Searching Algorithm Visualizer</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="header">
+
+            <div>
+                <p class="eyebrow">Algorithm Visualizer</p>
+                <h1>Searching Algorithm Visualizer</h1>
+                <p class="subtitle">
+                    Visualize Linear Search and Binary Search with animated blocks.
+                </p>
+            </div>
+
+        </header>
+
+        <section class="stats-panel">
+
+            <div class="stat-card">
+                <span>Status</span>
+                <strong id="status-text">Ready</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Comparisons</span>
+                <strong id="comparison-count">0</strong>
+            </div>
+
+        </section>
+
+        <section class="visualizer-card">
+
+            <div id="array-container" class="array-container"></div>
+
+        </section>
+
+        <section class="controls">
+
+            <div class="control-group">
+                <label for="algorithm">Algorithm</label>
+                <select id="algorithm">
+                    <option value="linear">Linear Search</option>
+                    <option value="binary">Binary Search</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="target-input">Target</label>
+                <input
+                    type="number"
+                    id="target-input"
+                    placeholder="Enter target"
+                >
+            </div>
+
+            <div class="control-group">
+                <label for="array-size">
+                    Array Size:
+                    <span id="array-size-value">30</span>
+                </label>
+
+                <input
+                    type="range"
+                    id="array-size"
+                    min="8"
+                    max="40"
+                    value="30"
+                >
+            </div>
+
+            <div class="control-group">
+                <label for="speed">
+                    Speed:
+                    <span id="speed-value">300 ms</span>
+                </label>
+
+                <input
+                    type="range"
+                    id="speed"
+                    min="80"
+                    max="900"
+                    value="300"
+                >
+            </div>
+
+            <div class="button-group">
+                <button id="new-array" class="btn secondary">
+                    Generate New Array
+                </button>
+
+                <button id="start" class="btn primary">
+                    Start Search
+                </button>
+            </div>
+
+        </section>
+
+        <section class="legend">
+
+            <div>
+                <span class="dot default"></span>
+                Default
+            </div>
+
+            <div>
+                <span class="dot checking"></span>
+                Checking
+            </div>
+
+            <div>
+                <span class="dot discarded"></span>
+                Discarded
+            </div>
+
+            <div>
+                <span class="dot found"></span>
+                Found
+            </div>
+
+            <div>
+                <span class="dot not-found"></span>
+                Not Found
+            </div>
+
+        </section>
+
+        <p id="note" class="note">
+            Enter a target value and start searching.
+        </p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
